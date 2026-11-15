@@ -233,7 +233,7 @@ def render() -> None:
         for col, (key, title, desc, _) in zip(cols, cards[row_start:row_start + 3]):
             with col:
                 with st.container(key=f"res_{key}"):
-                    html(f'<div class="rs-rescard"><img src="/app/static/art/icon-{key}.svg" alt="">'
+                    html(f'<div class="rs-rescard"><img src="app/static/art/icon-{key}.svg" alt="">'
                          f"<b>{esc(title)}</b><p>{esc(desc)}</p></div>")
                     if st.button("Open", type="tertiary", icon=":material/arrow_forward:", icon_position="right",
                                  key=f"rsopen_{key}"):

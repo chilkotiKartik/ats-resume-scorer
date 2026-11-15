@@ -58,7 +58,7 @@ def render() -> None:
         f'<div><h1>{greeting} <span class="rs-wave">👋</span></h1>'
         "<p>Your AI-powered resume analyzer for a better career. Upload a resume, add the job post, "
         "and see exactly what to fix.</p></div>"
-        '<img src="/app/static/art/banner.svg" alt="">'
+        '<img src="app/static/art/banner.svg" alt="">'
         "</div>"
     )
     st.space("small")
@@ -136,7 +136,7 @@ def render() -> None:
     for col, key, icon, title, text, target in cards:
         with col:
             with st.container(key=f"{key}_home"):
-                html(f'<div class="rs-rescard"><img src="/app/static/art/{icon}.svg" alt=""><b>{title}</b><p>{esc(text)}</p></div>')
+                html(f'<div class="rs-rescard"><img src="app/static/art/{icon}.svg" alt=""><b>{title}</b><p>{esc(text)}</p></div>')
                 if st.button("Open", type="tertiary", icon=":material/arrow_forward:", icon_position="right",
                              key=f"open_{target}"):
                     if target == "sample":

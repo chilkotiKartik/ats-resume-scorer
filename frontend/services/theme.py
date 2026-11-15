@@ -64,7 +64,7 @@ def load_css() -> None:
 
 def art(name: str) -> str:
     """URL of an illustration in static/art/."""
-    return f"/app/static/art/{name}.svg"
+    return f"app/static/art/{name}.svg"
 
 
 def mascot_for_score(score: float) -> str:

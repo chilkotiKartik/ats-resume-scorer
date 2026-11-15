@@ -177,7 +177,7 @@ def _render_sidebar(active: str) -> None:
     with st.sidebar:
         html(
             '<a class="rs-brand" href="/" target="_self">'
-            '<img src="/app/static/art/logo-robot.svg" alt="">'
+            '<img src="app/static/art/logo-robot.svg" alt="">'
             "<span>AI Resume<br>ATS Scorer</span></a>"
         )
         for slug, (label, icon) in navigation.SIDE_NAV.items():

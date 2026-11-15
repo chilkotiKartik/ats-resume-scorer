@@ -35,6 +35,12 @@ Instead of simply answering *"Does my resume match this job?"*, the application 
 
 ---
 
+## 🚀 Live app
+
+**[ats-resume-score-ai.streamlit.app](https://ats-resume-score-ai.streamlit.app)**: no account or API key needed to try it.
+
+---
+
 ## 🖼️ Screenshots
 
 | Home | Report |

@@ -1,0 +1,63 @@
+# ATS Resume Scorer — Streamlit configuration
+# Copy of frontend/.streamlit/config.toml — Streamlit Cloud reads the config from the repo root.
+# Fonts are self-hosted from frontend/static/fonts (served at app/static/…),
+# so the UI renders the same offline, behind proxies and on Streamlit Cloud.
+
+[theme]
+base = "light"
+primaryColor = "#18213A"              # ink
+backgroundColor = "#EDEFF2"           # copier paper
+secondaryBackgroundColor = "#FFFFFF"  # sheet
+textColor = "#18213A"
+linkColor = "#18213A"
+linkUnderline = true
+borderColor = "#CDD3DC"
+showWidgetBorder = true
+baseRadius = "6px"
+buttonRadius = "6px"
+baseFontSize = 16
+font = "Schibsted Grotesk, system-ui, sans-serif"
+headingFont = "Newsreader, Georgia, serif"
+headingFontWeights = [500, 500, 600, 600, 600, 600]
+redColor = "#C93A2E"
+greenColor = "#2E7A4E"
+yellowColor = "#A86A06"
+blueColor = "#2B4C8C"
+
+[[theme.fontFaces]]
+family = "Schibsted Grotesk"
+url = "app/static/fonts/schibsted-grotesk-latin-wght-normal.woff2"
+weight = "400 900"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Schibsted Grotesk"
+url = "app/static/fonts/schibsted-grotesk-latin-wght-italic.woff2"
+weight = "400 900"
+style = "italic"
+
+[[theme.fontFaces]]
+family = "Newsreader"
+url = "app/static/fonts/newsreader-latin-standard-normal.woff2"
+weight = "200 800"
+style = "normal"
+
+[[theme.fontFaces]]
+family = "Newsreader"
+url = "app/static/fonts/newsreader-latin-wght-italic.woff2"
+weight = "200 800"
+style = "italic"
+
+[server]
+maxUploadSize = 5
+enableXsrfProtection = false
+enableCORS = false
+enableStaticServing = true
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showSidebarNavigation = false
+toolbarMode = "minimal"

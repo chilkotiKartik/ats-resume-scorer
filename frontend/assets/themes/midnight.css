@@ -1,0 +1,137 @@
+/* =====================================================================
+   Midnight theme — the same marked-up page under a desk lamp.
+   Deep blue-ink surfaces; the highlighter glows.
+   ===================================================================== */
+
+:root {
+    --paper: #0E1530;
+    --sheet: #162043;
+    --ink: #EEF1FA;
+    --ink-2: #FFFFFF;
+    --graphite: #B3BDD9;
+    --muted: #8591B4;
+    --rule: #2B3866;
+    --rule-soft: #22305C;
+    --marker: #FFE04A;
+    --marker-soft: #3A3A2A;
+    --redpen: #FF7A6B;
+    --redpen-soft: #3D2233;
+    --green: #4FD1A1;
+    --green-soft: #173A3A;
+    --ochre: #F5B94B;
+    --ochre-soft: #3A3122;
+}
+
+.stApp {
+    background-color: var(--paper);
+    background-image:
+        radial-gradient(1200px 520px at 75% -10%, rgba(255, 224, 74, .07), transparent 70%),
+        radial-gradient(rgba(255, 255, 255, .05) 1px, transparent 1.2px);
+    background-size: auto, 26px 26px;
+    color: var(--ink);
+}
+
+/* Native text */
+.stApp, [data-testid="stWidgetLabel"] p, [data-testid="stMarkdownContainer"],
+[data-testid="stMarkdownContainer"] p, [data-testid="stCaptionContainer"],
+[data-testid="stCheckbox"] label, [data-baseweb="radio"] label, [data-testid="stExpander"] summary,
+[data-testid="stFileUploaderDropzoneInstructions"] span, [data-testid="stFileUploaderDropzoneInstructions"] small,
+.stButton button, .stDownloadButton button { color: var(--ink); }
+[data-testid="stFileUploaderDropzoneInstructions"] small { color: var(--muted); }
+button:disabled p { color: var(--muted) !important; }
+:root { --nav-active-fg: var(--marker); --nav-active-bg: linear-gradient(transparent, transparent); }
+.stApp h1, .stApp h2, .stApp h3 { color: var(--ink); }
+
+/* Top bar */
+.st-key-topbar { border-bottom-color: var(--rule); }
+.rs-wordmark { color: var(--ink); }
+.rs-wordmark b { color: #0E1530; box-shadow: 0 0 18px rgba(255, 224, 74, .45); }
+.rs-wordmark span { color: var(--graphite); }
+.st-key-topbar a[data-testid="stPageLink-NavLink"] p { color: var(--graphite); }
+.st-key-topbar a[data-testid="stPageLink-NavLink"]:hover { background: rgba(255, 255, 255, .06); }
+.st-key-topbar a[data-testid="stPageLink-NavLink"]:hover p { color: var(--ink); }
+
+/* Buttons */
+button[data-testid="stBaseButton-primary"], button[data-testid="stBaseButton-primaryFormSubmit"],
+[data-testid="stBaseLinkButton-primary"] {
+    background: var(--marker); border-color: var(--marker); color: #0E1530;
+    box-shadow: 0 0 22px -4px rgba(255, 224, 74, .55);
+}
+button[data-testid="stBaseButton-primary"] p, button[data-testid="stBaseButton-primaryFormSubmit"] p { color: #0E1530 !important; }
+button[data-testid="stBaseButton-primary"]:hover, button[data-testid="stBaseButton-primaryFormSubmit"]:hover { background: #FFEA7A; border-color: #FFEA7A; color: #0E1530; }
+button[data-testid="stBaseButton-secondary"], button[data-testid="stBaseButton-secondaryFormSubmit"],
+[data-testid="stBaseLinkButton-secondary"], [data-testid="stPopover"] button {
+    background: transparent; border: 1px solid #4A5A8F; color: var(--ink);
+}
+button[data-testid="stBaseButton-secondary"]:hover, [data-testid="stPopover"] button:hover { background: rgba(255, 255, 255, .06); border-color: var(--ink); color: var(--ink); }
+button[data-testid="stBaseButton-tertiary"] p { color: var(--graphite); }
+button:disabled, button:disabled p { opacity: .5; }
+
+/* Inputs */
+[data-baseweb="textarea"], [data-baseweb="input"], [data-baseweb="base-input"],
+.stTextArea textarea, .stTextInput input { background: #101836 !important; color: var(--ink) !important; border-color: var(--rule) !important; }
+.stTextArea textarea::placeholder, .stTextInput input::placeholder { color: var(--muted); }
+[data-testid="stFileUploaderDropzone"] { background: #101836; border-color: #4A5A8F; }
+[data-testid="stFileUploaderDropzone"]:hover { background: #131D40; border-color: var(--marker); }
+[data-testid="stFileUploaderDropzone"] button { background: transparent; color: var(--ink); border-color: #4A5A8F; }
+[data-testid="stFileUploaderFile"], [data-testid="stFileChip"] { background: #1D2A55 !important; color: var(--ink); }
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"] { background: #101836; border-color: var(--rule); }
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"] p { color: var(--graphite); }
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"][aria-checked="true"] { background: var(--marker); border-color: var(--marker); }
+[data-testid="stButtonGroup"] button[data-variant="segmented_control"][aria-checked="true"] p { color: #0E1530; }
+[data-testid="stCheckbox"] [role="checkbox"], [data-testid="stCheckbox"] span[aria-hidden] { border-color: #6A78A8; }
+[data-baseweb="radio"] div { border-color: #6A78A8; }
+
+/* Tabs, expanders, forms, popovers */
+.stTabs [role="tablist"] { border-bottom-color: var(--rule); }
+.stTabs [data-testid="stTab"] p { color: var(--muted); }
+.stTabs [data-testid="stTab"][aria-selected="true"] p { color: var(--ink); }
+.stTabs .react-aria-SelectionIndicator { background: var(--marker) !important; box-shadow: 0 0 12px rgba(255, 224, 74, .6); }
+[data-testid="stExpander"] details { background: var(--sheet); border-color: var(--rule); }
+[data-testid="stExpander"] summary:hover { background: rgba(255, 255, 255, .03); }
+[data-testid="stForm"], .st-key-auth_card { background: var(--sheet) !important; border-color: var(--rule) !important; }
+[data-testid="stPopoverBody"], [data-baseweb="popover"] > div { background: var(--sheet) !important; color: var(--ink); border-color: var(--rule) !important; }
+[class*="st-key-hist_"] { background: var(--sheet) !important; border-color: var(--rule) !important; }
+[data-testid="stVerticalBlockBorderWrapper"] { border-color: var(--rule); }
+
+/* Components */
+.rs-hl { color: #0E1530; }
+.rs-page { border-color: #CCD3E6; box-shadow: 0 0 0 1px rgba(255, 255, 255, .06), 0 30px 90px -20px rgba(255, 224, 74, .35); }
+.stApp .rs-page { background: #FFFFFF; }
+.stApp .rs-page, .stApp .rs-page * { color: #18213A; }
+.rs-page .rs-hl { color: #18213A; }
+.rs-page li::before { background: #18213A; }
+.rs-page__label { border-bottom-color: #18213A; }
+.stApp .rs-page .rs-grade, .stApp .rs-page .rs-grade small { color: #C93A2E; border-color: #C93A2E; }
+.rs-note--red { color: var(--redpen); }
+.rs-note--green { color: var(--green); }
+.rs-split__seg { border-top-color: var(--marker); }
+.rs-split__seg:nth-child(2n) { border-top-color: #9BA8D0; }
+.st-key-callout { background: linear-gradient(135deg, #1D2A59, #24326A); border: 1px solid #34437D; }
+.st-key-callout button[data-testid="stBaseButton-secondary"] { background: var(--marker); border-color: var(--marker); color: #0E1530; }
+.st-key-callout button[data-testid="stBaseButton-secondary"] p { color: #0E1530; }
+.rs-chip { background: transparent; border-color: #3A4A80; color: var(--ink); }
+.rs-chip--hit { background: var(--marker); border-color: var(--marker); color: #0E1530; box-shadow: 0 0 14px -2px rgba(255, 224, 74, .5); }
+.rs-chip--gap { color: var(--redpen); border-color: var(--redpen); }
+.rs-chip--ok { color: var(--green); }
+.rs-ruler__fill { background: #C9D2EE; }
+.rs-ruler--weak .rs-ruler__fill { background: var(--redpen); }
+.rs-ruler__track::after { background-image: linear-gradient(90deg, transparent calc(100% - 2px), var(--sheet) 0); }
+.rs-match { background: var(--rule); }
+.rs-match__bar i, .rs-mini__t i { background: var(--marker); }
+.rs-score__scale { background: linear-gradient(90deg, #5A2F3C 0 50%, #5A4A2C 50% 70%, #1F4F44 70% 100%); }
+.rs-score__scale i { background: var(--marker); box-shadow: 0 0 10px rgba(255, 224, 74, .8); }
+.rs-band--green { background: var(--green-soft); }
+.rs-ba__col { background: #121B3B; }
+.rs-ba__col--after { background: #12302F; }
+.rs-ba__text { color: var(--ink); }
+.rs-list--plain li::before { background: var(--marker); }
+.rs-headings span { border-color: #4A5A8F; background: var(--sheet); color: var(--ink); }
+.rs-stephead__n { border-color: var(--marker); color: var(--marker); }
+.rs-filecard__icon { border-color: var(--ink); }
+.rs-sevdot--medium { background: var(--ochre); }
+.rs-hrow__score.green, .rs-bullet__score.green { color: var(--green); }
+.rs-step__n { color: var(--marker); text-shadow: 0 0 18px rgba(255, 224, 74, .45); }
+.rs-mascot-react, .rs-hero-mascot { filter: drop-shadow(0 0 22px rgba(255, 224, 74, .25)); }
+.rs-hero-mascot { position: absolute; right: .5rem; bottom: -3rem; width: 140px; z-index: 2; }
+.rs-mascot-react { top: 1.2rem; bottom: auto; right: 1.2rem; width: 112px; }

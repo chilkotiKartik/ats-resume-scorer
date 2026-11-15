@@ -1,0 +1,30 @@
+2026-11-15 13:59:18,991 - INFO - parse_Resume_file: parsing file :priya-raman-resume.docx
+2026-11-15 13:59:19,010 - INFO - resume_parser: Extracted 814 chars from DOCX
+2026-11-15 13:59:19,011 - INFO - parse_resume_file: Extracted 814 chars from priya-raman-resume.docx
+2026-11-15 13:59:20,271 - INFO - Groq parsed summary: ''
+2026-11-15 13:59:20,271 - INFO - Groq parsed skills count: 21
+2026-11-15 13:59:20,271 - INFO - Groq parsed experience count: 1
+2026-11-15 14:09:09,933 - INFO - parse_Resume_file: parsing file :priya-raman-resume.docx
+2026-11-15 14:09:09,955 - INFO - resume_parser: Extracted 814 chars from DOCX
+2026-11-15 14:09:09,955 - INFO - parse_resume_file: Extracted 814 chars from priya-raman-resume.docx
+2026-11-15 14:09:11,265 - INFO - Groq parsed summary: ''
+2026-11-15 14:09:11,265 - INFO - Groq parsed skills count: 21
+2026-11-15 14:09:11,265 - INFO - Groq parsed experience count: 1
+2026-11-15 14:12:56,877 - INFO - parse_Resume_file: parsing file :priya-raman-resume.docx
+2026-11-15 14:12:56,895 - INFO - resume_parser: Extracted 814 chars from DOCX
+2026-11-15 14:12:56,895 - INFO - parse_resume_file: Extracted 814 chars from priya-raman-resume.docx
+2026-11-15 14:12:58,138 - INFO - Groq parsed summary: ''
+2026-11-15 14:12:58,139 - INFO - Groq parsed skills count: 21
+2026-11-15 14:12:58,139 - INFO - Groq parsed experience count: 1
+2026-11-15 14:32:46,303 - INFO - parse_Resume_file: parsing file :priya-raman-resume.docx
+2026-11-15 14:32:46,331 - INFO - resume_parser: Extracted 814 chars from DOCX
+2026-11-15 14:32:46,331 - INFO - parse_resume_file: Extracted 814 chars from priya-raman-resume.docx
+2026-11-15 14:32:51,426 - INFO - Groq parsed summary: ''
+2026-11-15 14:32:51,426 - INFO - Groq parsed skills count: 21
+2026-11-15 14:32:51,426 - INFO - Groq parsed experience count: 1
+2026-11-15 14:34:29,719 - INFO - parse_Resume_file: parsing file :priya-raman-resume.docx
+2026-11-15 14:34:29,739 - INFO - resume_parser: Extracted 814 chars from DOCX
+2026-11-15 14:34:29,739 - INFO - parse_resume_file: Extracted 814 chars from priya-raman-resume.docx
+2026-11-15 14:34:30,792 - INFO - Groq parsed summary: ''
+2026-11-15 14:34:30,792 - INFO - Groq parsed skills count: 21
+2026-11-15 14:34:30,792 - INFO - Groq parsed experience count: 1

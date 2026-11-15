@@ -1,5 +1,8 @@
 import io
-import magic
+try:
+    import magic  # needs the libmagic system library
+except Exception:  # ImportError, or OSError when libmagic is missing
+    magic = None
 from typing import Tuple, Optional, Tuple
 
 import pdfplumber
@@ -28,6 +31,24 @@ class FileParsingError(Exception):
 class FileValidationError(Exception):
     pass
 
+def _sniff_mime(file_data: bytes) -> str:
+    """Detect the file type from its first bytes. Uses libmagic when available,
+    otherwise recognises the three supported formats by their signatures."""
+    if magic is not None:
+        try:
+            return magic.from_buffer(file_data, mime=True)
+        except Exception:
+            pass
+    head = file_data[:8]
+    if head.startswith(b'%PDF'):
+        return 'application/pdf'
+    if head.startswith(b'PK\x03\x04') and b'word/' in file_data[:200000]:
+        return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+    if head.startswith(b'\xD0\xCF\x11\xE0\xA1\xB1\x1A\xE1'):
+        return 'application/msword'
+    return 'application/octet-stream'
+
+
 def validate_file(file_data:bytes, filename:str)->Tuple[bool, str, Optional[str]]:
     file_size_bytes = len(file_data)
     if file_size_bytes > MAX_FILE_SIZE_BYTES:
@@ -38,12 +59,9 @@ def validate_file(file_data:bytes, filename:str)->Tuple[bool, str, Optional[str]
         ), None
     
     if file_size_bytes==0:
-        return False, 'uploade file is empty...please check the file you have uploaded and try again'
+        return False, 'The uploaded file is empty. Please check the file and try again.', None
     
-    try:
-        mime_type=magic.from_buffer(file_data, mime=True)
-    except Exception as e:
-        return False, f"error deteminin the file type : {e}", None
+    mime_type = _sniff_mime(file_data)
     
     if mime_type not in SUPPORTED_MIME_TYPES:
         supported=', '.join(SUPPORTED_MIME_TYPES.keys()).upper()
